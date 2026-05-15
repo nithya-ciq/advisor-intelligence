@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randy Browne — Advisor Voice-of-Customer Prep · ConsumerIQ / BevGenie</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #faf9f7;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 28px 80px; }
+
+  .tab-nav { display: flex; gap: 0; border-bottom: 1px solid #e6e2dc; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab-nav a { padding: 10px 18px; text-decoration: none; color: #6c6760; font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; }
+  .tab-nav a:hover { color: #1a1a1a; }
+  .tab-nav a.active { color: #1a1a1a; border-bottom-color: #5b8a3a; font-weight: 600; }
+
+  header.top { border-bottom: 1px solid #e6e2dc; padding-bottom: 18px; margin-bottom: 24px; }
+  header.top .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #5b8a3a; font-weight: 600; }
+  header.top h1 { margin: 6px 0 4px; font-size: 26px; font-weight: 600; letter-spacing: -0.4px; }
+  header.top .meta { font-size: 13.5px; color: #6c6760; }
+  header.top .meta a { color: #4a6b9a; }
+
+  .tldr {
+    background: #f4f8f2;
+    border-left: 5px solid #5b8a3a;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 0 0 24px;
+    font-size: 14px;
+  }
+  .tldr strong { color: #3d5e26; }
+  .tldr p { margin: 0 0 6px; }
+  .tldr p:last-child { margin-bottom: 0; }
+
+  h2.section {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 5px;
+    letter-spacing: -0.2px;
+  }
+
+  .snapshot {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+  }
+  .snapshot dl { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: 8px 14px; }
+  .snapshot dt { color: #6c6760; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; padding-top: 3px; }
+  .snapshot dd { margin: 0; }
+
+  .knows {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-left: 4px solid #4a6b9a;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .knows h3 { margin: 0 0 4px; font-size: 14.5px; font-weight: 600; }
+  .knows p { margin: 0; font-size: 13.5px; color: #1a1a1a; }
+
+  .q-block {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+  .q-block ol { margin: 0; padding-left: 22px; counter-reset: q; list-style: none; }
+  .q-block ol li {
+    counter-increment: q;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 4px;
+  }
+  .q-block ol li:before {
+    content: counter(q);
+    position: absolute;
+    left: -22px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #5b8a3a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+  }
+  .q-block .q-text { font-size: 14px; font-weight: 500; }
+  .q-block .q-why { font-size: 12.5px; color: #6c6760; margin-top: 3px; font-style: italic; }
+  .q-block .priority-top { border-left: 3px solid #5b8a3a; padding-left: 8px; margin-left: -8px; padding-top: 2px; padding-bottom: 2px; }
+
+  .signal {
+    background: #fef9ed;
+    border-left: 4px solid #b48f3a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+  }
+  .signal .sig { font-weight: 600; color: #6b4f15; display: block; margin-bottom: 3px; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .signal .body { color: #1a1a1a; }
+
+  .opener {
+    background: #f3f5fb;
+    border-left: 4px solid #4a6b9a;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+  .opener .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #2c4d80;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-style: normal;
+    display: block;
+  }
+
+  .next-steps { background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px; font-size:13.5px; }
+  .next-steps ul { margin: 4px 0 0 18px; padding: 0; }
+  .next-steps li { margin-bottom: 5px; }
+
+  .footer-notes {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #e6e2dc;
+    font-size: 12.5px;
+    color: #6c6760;
+  }
+  .footer-notes h3 { color: #1a1a1a; font-size: 13px; margin: 0 0 6px; }
+  .footer-notes ul { margin: 4px 0 12px 18px; padding: 0; }
+  .footer-notes li { margin-bottom: 3px; }
+
+  a { color: #4a6b9a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="tab-nav">
+  <a href="index.html">StephenWhite</a>
+  <a href="randy-browne.html" class="active">RandyBrowne</a>
+</nav>
+
+<header class="top">
+  <div class="eyebrow">Voice-of-customer prep · Today's 1pm ET advisor session</div>
+  <h1>Randy Browne — signed-on advisor, ex-Molson Coors, 24-yr BevAlc insights veteran</h1>
+  <div class="meta">Director, Insights &amp; Analytics specialist · Category Management + RGM + Shopper Insights · Boise ID · <a href="https://www.linkedin.com/in/randybrowne/" target="_blank">LinkedIn</a> · <strong>Name spelling: Browne (with an e)</strong></div>
+</header>
+
+<!-- ═══════ TLDR ═══════ -->
+<div class="tldr">
+  <p><strong>Randy is the perfect voice-of-customer source for BevGenie's wedge.</strong> 24 years across Molson Coors, Brown-Forman, Campari, C. Mondavi — always in the Category Management / Insights / Analytics function. <em>That function IS the commercial-team decision layer BevGenie targets.</em></p>
+  <p><strong>His own stated consulting focus right now: "AI companies targeting CPG."</strong> He's already recruiting himself for exactly what BevGenie is. Already on the Lateish Drinks advisory board — knows the formal-advisor pattern. <strong>The signal in this call is "what tooling would have made my old job easier and why didn't it exist."</strong></p>
+  <p><strong>Goal of today's session:</strong> extract the playbook of how supplier category-management teams actually make decisions — pricing, assortment, promotion, retailer-JBP cycles, tool evaluation. Don't pitch; listen. Convert his answers into roadmap + positioning sharpening + 1-2 warm intros at his exit.</p>
+</div>
+
+<!-- ═══════ SNAPSHOT ═══════ -->
+<h2 class="section">📇 Verified profile snapshot</h2>
+<div class="snapshot">
+  <dl>
+    <dt>Full name</dt><dd><strong>Randy Browne</strong> (note: Browne with an e — verify spelling in any written outreach)</dd>
+    <dt>Current status</dt><dd><strong>Self-employed</strong> · randybrowne consulting (relaunched Jan 2026) · also <strong>Advisory Board Member, Lateish Drinks</strong> · already signed on as BevGenie advisor</dd>
+    <dt>Most recent FT role</dt><dd><strong>National Category Strategy &amp; Insights Director, Molson Coors</strong> · Mar 2020 – Dec 2025 (5 yrs 10 mos) · $535M business, $2.7B category, 4,300 stores, led team of 5 · Albertsons + Ahold Delhaize accounts · <strong>Won 2023 Albertsons Total Alcohol Supplier of the Year</strong> (1 of 36)</dd>
+    <dt>Core competency</dt><dd>Category management · pricing strategy · assortment + promotion analytics · shopper insights · revenue growth management · joint business planning with retailers · building insights teams</dd>
+    <dt>Career arc</dt><dd>ARS Group (1997-2004) → IRI Category Management (2006-07) → Brown-Forman analyst/insights (2007-2012) → OtterBox (2012-13) → Atkins (2013-14) → Campari (2014-16) → randybrowne consulting (2016-20) → C. Mondavi (2017-19) → Molson Coors (2020-25) → consulting relaunch (2026)</dd>
+    <dt>Geography</dt><dd>Boise, Idaho · Remote-default · most calls will be Zoom</dd>
+    <dt>Skills tagged</dt><dd>28+ skills including Category Insights, Pricing Strategy, Segmentation, Customer Insight, Business Strategy, RGM</dd>
+    <dt>Stated consulting focus</dt><dd><strong>"Alcohol &amp; CPG, AI companies targeting CPG"</strong> — verbatim from his LinkedIn. He is actively recruiting himself for the exact kind of company BevGenie is.</dd>
+  </dl>
+</div>
+
+<!-- ═══════ WHAT HE UNIQUELY KNOWS ═══════ -->
+<h2 class="section">🎯 What Randy uniquely knows — the rare expertise we're trying to extract</h2>
+
+<div class="knows">
+  <h3>① Supplier-side category-management decisions, end-to-end</h3>
+  <p>Pricing architecture, assortment shifts, promotional investment, scenario modeling — the actual decision workflow inside a $535M Molson Coors business across 4,300 stores. This is the workflow BevGenie's agents are designed to assist. He knows where the friction is, what data was used, what cadence, what stakeholders.</p>
+</div>
+
+<div class="knows">
+  <h3>② Retailer-supplier joint business planning at Albertsons + Ahold Delhaize</h3>
+  <p>Led 25+ annual retailer-facing category reviews and JBP sessions. Knows the prep work, the artifacts, the negotiation dynamics, what data wins / loses these conversations. Critical for BevGenie if/when we extend to retailer-side workflows.</p>
+</div>
+
+<div class="knows">
+  <h3>③ Tool / vendor procurement inside a supplier insights org</h3>
+  <p>Secured $450K analytics investment at C. Mondavi (small wine co), managed $800K research budget at Campari (mid-size spirits), and worked inside Molson Coors' larger-scale stack. <strong>Knows what gets bought, what gets rejected, and why.</strong> Direct insight into how BevGenie's competitors (Nielsen, IRI, Stackline, 84.51, Numerator, Circana) actually get evaluated.</p>
+</div>
+
+<div class="knows">
+  <h3>④ Cross-category-vertical pattern recognition</h3>
+  <p>He has worked beer (Molson Coors), spirits (Campari, Brown-Forman), wine (C. Mondavi), non-alcohol CPG (Atkins, OtterBox). <strong>Knows what's the same vs different across BevAlc verticals + adjacent CPG.</strong> Helps calibrate BevGenie's vertical-AI thesis: is it really beer-vs-spirits-vs-wine different, or is the supplier playbook largely shared?</p>
+</div>
+
+<div class="knows">
+  <h3>⑤ Insights-team org design</h3>
+  <p>Built / led a 5-person insights team at Molson Coors covering Sales, Marketing, Supply Chain, Finance, RGM. <strong>Knows how the insights function actually staffs up</strong> — what roles, what hand-offs, what bottlenecks. Useful for BevGenie when modeling the "we replace what an insights team does" pitch.</p>
+</div>
+
+<!-- ═══════ PRIORITY QUESTIONS ═══════ -->
+<h2 class="section">❓ 8 priority questions for today's call (ranked)</h2>
+
+<div class="q-block">
+  <ol>
+    <li class="priority-top">
+      <div class="q-text">"Walk me through how a typical pricing or assortment decision at Molson Coors actually got made. What data did you pull, who weighed in, what was the cadence, where did it stall?"</div>
+      <div class="q-why">This is question zero. The workflow he describes IS BevGenie's wedge. Listen for the specific friction points + manual steps + multi-tool stitching.</div>
+    </li>
+    <li class="priority-top">
+      <div class="q-text">"What tools did your insights team rely on day-to-day — Nielsen, IRI, Stackline, internal BI, scenario-modeling platforms? Which delivered ROI and which didn't?"</div>
+      <div class="q-why">Direct competitive-positioning intel. Pricing reality check. What budget lines actually moved.</div>
+    </li>
+    <li class="priority-top">
+      <div class="q-text">"When you secured the $450K at C. Mondavi or evaluated tools at Molson Coors, what convinced procurement / leadership to greenlight? What killed deals?"</div>
+      <div class="q-why">Direct sales-motion intel for BevGenie. We need to know the buyer's actual evaluation criteria + the killers.</div>
+    </li>
+    <li>
+      <div class="q-text">"Walk me through one Albertsons or Ahold Delhaize JBP cycle. What's the prep, what's the artifact, what's the actual negotiation dynamic?"</div>
+      <div class="q-why">Retailer-side view. Sharpens our understanding of where supplier decisions hit retailer reality. Bonus: identifies potential warm-intro paths.</div>
+    </li>
+    <li>
+      <div class="q-text">"You won the 2023 Albertsons Total Alcohol Supplier of the Year — what specifically did Molson Coors do differently that year vs other suppliers? How much of that was tooling vs people vs strategy?"</div>
+      <div class="q-why">Real-world cause-attribution. Helps calibrate BevGenie's claim of "decision-velocity advantage."</div>
+    </li>
+    <li>
+      <div class="q-text">"You worked beer at Molson Coors, spirits at Campari + Brown-Forman, wine at Mondavi — when you switch verticals, what stays the same vs what's actually different in the category-management playbook?"</div>
+      <div class="q-why">Validates / sharpens BevGenie's vertical-AI thesis. Is BevAlc-specific really the right wedge, or is it CPG-supplier-specific?</div>
+    </li>
+    <li>
+      <div class="q-text">"Your stated consulting focus is 'AI companies targeting CPG' — what made you choose that thesis? Which AI companies have you seen do this well vs poorly?"</div>
+      <div class="q-why">Directly probes his read on the competitive landscape + the bar of what he respects. Useful for BevGenie's positioning.</div>
+    </li>
+    <li>
+      <div class="q-text">"If you had to name one workflow your team had to do that you'd most want to see automated — that no tool you tried did well — what was it?"</div>
+      <div class="q-why">Best single roadmap-shaping question. Closes the loop on what BevGenie should prioritize building next.</div>
+    </li>
+  </ol>
+</div>
+
+<!-- ═══════ OPENER ═══════ -->
+<h2 class="section">🎙️ Suggested opener (60-90 sec)</h2>
+<div class="opener">
+  <span class="label">Use this verbatim if it lands naturally</span>
+  "Randy — first, thanks for jumping in as advisor. Want to make these sessions valuable both ways, so let me set the frame quickly. We're not going to pitch you today — we want to mine your experience. Twenty-four years across Molson Coors, Brown-Forman, Campari, Mondavi, in the category-management / insights / analytics function. That function IS exactly where BevGenie sits — supplier commercial teams making pricing, assortment, promotion, JBP decisions. Most of our product-design questions don't have public answers; they need someone who's lived inside that workflow. So today I'd love to ask you about how decisions actually got made, what tools you used, what failed, what would have made your old job easier. Sound good?"
+</div>
+
+<!-- ═══════ SIGNAL TO LISTEN FOR ═══════ -->
+<h2 class="section">👂 Signal to listen for — what specific answers change BevGenie's roadmap or positioning</h2>
+
+<div class="signal">
+  <span class="sig">Workflow specifics that map to BevGenie agents</span>
+  <span class="body">If he describes a workflow (e.g., "every Tuesday I'd pull a Stackline report and manually compare it to our internal forecast and email three stakeholders") — that's a Pattern B agent we can build. Capture verbatim.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Named vendors he tried + outcomes</span>
+  <span class="body">Specific tool names: Nielsen, IRI/Circana, Stackline, Numerator, NumeratorIQ, 84.51, dunnhumby, Profitero, TABS Analytics, Wynshop. Note which delivered vs disappointed + why. Competitive teardown gold.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Budget-line / procurement criteria</span>
+  <span class="body">If he says "we never bought a tool unless it did X" or "procurement always asked Y" — that's pricing + sales-motion calibration for BevGenie.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Cross-vertical-pattern signal</span>
+  <span class="body">If he says beer vs wine vs spirits decisions are basically the same workflow — supports a broader BevAlc wedge. If he says they're fundamentally different — supports vertical-specific agents per category.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Named ex-colleagues he'd introduce us to</span>
+  <span class="body">Anyone he mentions positively at Albertsons / Ahold Delhaize / former Molson Coors / Brown-Forman / Campari peers = potential warm-intro pool. Note names + flag for follow-up ask in meeting 2.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">"AI companies I've seen do this well" cohort</span>
+  <span class="body">His consulting focus is AI-for-CPG — he'll have a shortlist of companies he respects in this space. That list IS our peer set + a referral pool.</span>
+</div>
+
+<!-- ═══════ HOW TO USE WHAT HE SAYS ═══════ -->
+<h2 class="section">🛠️ How to use what he says — next-step framings</h2>
+<div class="next-steps">
+  <ul>
+    <li><strong>Immediate:</strong> map each described workflow to BevGenie's Pattern B agents. Where his workflow has no agent yet, that's a roadmap gap.</li>
+    <li><strong>Within 48 hrs:</strong> send him a 1-page recap of what we heard + how we're going to use specific pieces. Demonstrates we listen + execute.</li>
+    <li><strong>Next session (Friday):</strong> show him 1-2 BevGenie agent demos that map directly to workflows he described today. "When you said X, that's exactly what we built here. Does this look right?"</li>
+    <li><strong>Within 30 days:</strong> ask him for 1-2 warm intros — either ex-Molson-Coors / Brown-Forman / Campari peers OR retailer-side contacts at Albertsons / Ahold Delhaize.</li>
+    <li><strong>Capture verbatim:</strong> his consulting-focus language ("AI companies targeting CPG") is the exact framing we should use when pitching investor-types who don't already speak BevAlc. Lift his wording.</li>
+  </ul>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<div class="footer-notes">
+  <h3>Sources verified for this brief</h3>
+  <ul>
+    <li>LinkedIn Experience section (full career arc + dates + role descriptions) — verified May 15, 2026</li>
+    <li>Local repo: <code>crm-req/transcripts/2026-04-13-day1-full-transcript.md</code> (Shyam's own account of the original Randy Browne contact + duplicate-outreach story)</li>
+    <li>Local repo: <code>MEETING-SCRIPT-MAY-8.txt</code> ("Randy Brown joining as advisor Wed + Fri next week")</li>
+    <li>Local repo: <code>SRINI-MAY5-DATA-KNOWLEDGE-CONTEXT.md</code> (Randy referenced in History/episodic data examples)</li>
+  </ul>
+
+  <h3>Open questions Shyam can fill in mid-call</h3>
+  <ul>
+    <li>Why did he leave Molson Coors after 5 yrs 10 mos? (Don't ask directly; if he volunteers, listen.)</li>
+    <li>Is the consulting relaunch a full-time intent or a bridge to a next FT role?</li>
+    <li>What other advisory engagements is he taking right now beyond Lateish Drinks + BevGenie?</li>
+    <li>What's his retainer / equity expectation, if any, for advisory work?</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
