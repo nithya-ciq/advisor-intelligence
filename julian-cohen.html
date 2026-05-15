@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julian Cohen — Advisor Candidate Prep · ConsumerIQ / BevGenie</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #faf9f7;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 28px 80px; }
+
+  .tab-nav { display: flex; gap: 0; border-bottom: 1px solid #e6e2dc; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab-nav a { padding: 10px 18px; text-decoration: none; color: #6c6760; font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; }
+  .tab-nav a:hover { color: #1a1a1a; }
+  .tab-nav a.active { color: #1a1a1a; border-bottom-color: #5b8a3a; font-weight: 600; }
+
+  header.top { border-bottom: 1px solid #e6e2dc; padding-bottom: 18px; margin-bottom: 24px; }
+  header.top .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #5b8a3a; font-weight: 600; }
+  header.top h1 { margin: 6px 0 4px; font-size: 26px; font-weight: 600; letter-spacing: -0.4px; }
+  header.top .meta { font-size: 13.5px; color: #6c6760; }
+  header.top .meta a { color: #4a6b9a; }
+
+  .tldr {
+    background: #f4f8f2;
+    border-left: 5px solid #5b8a3a;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 0 0 24px;
+    font-size: 14px;
+  }
+  .tldr strong { color: #3d5e26; }
+  .tldr p { margin: 0 0 6px; }
+  .tldr p:last-child { margin-bottom: 0; }
+
+  h2.section {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 5px;
+    letter-spacing: -0.2px;
+  }
+
+  .snapshot {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+  }
+  .snapshot dl { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: 8px 14px; }
+  .snapshot dt { color: #6c6760; font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; padding-top: 3px; }
+  .snapshot dd { margin: 0; }
+
+  .knows {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-left: 4px solid #4a6b9a;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .knows h3 { margin: 0 0 4px; font-size: 14.5px; font-weight: 600; }
+  .knows p { margin: 0; font-size: 13.5px; color: #1a1a1a; }
+
+  .q-block {
+    background: #fff;
+    border: 1px solid #e6e2dc;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+  .q-block ol { margin: 0; padding-left: 22px; counter-reset: q; list-style: none; }
+  .q-block ol li {
+    counter-increment: q;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 4px;
+  }
+  .q-block ol li:before {
+    content: counter(q);
+    position: absolute;
+    left: -22px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #5b8a3a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+  }
+  .q-block .q-text { font-size: 14px; font-weight: 500; }
+  .q-block .q-why { font-size: 12.5px; color: #6c6760; margin-top: 3px; font-style: italic; }
+  .q-block .priority-top { border-left: 3px solid #5b8a3a; padding-left: 8px; margin-left: -8px; padding-top: 2px; padding-bottom: 2px; }
+
+  .signal {
+    background: #fef9ed;
+    border-left: 4px solid #b48f3a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+  }
+  .signal .sig { font-weight: 600; color: #6b4f15; display: block; margin-bottom: 3px; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .signal .body { color: #1a1a1a; }
+
+  .opener {
+    background: #f3f5fb;
+    border-left: 4px solid #4a6b9a;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+  .opener .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #2c4d80;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-style: normal;
+    display: block;
+  }
+
+  .next-steps { background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px; font-size:13.5px; }
+  .next-steps ul { margin: 4px 0 0 18px; padding: 0; }
+  .next-steps li { margin-bottom: 5px; }
+
+  .footer-notes {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #e6e2dc;
+    font-size: 12.5px;
+    color: #6c6760;
+  }
+  .footer-notes h3 { color: #1a1a1a; font-size: 13px; margin: 0 0 6px; }
+  .footer-notes ul { margin: 4px 0 12px 18px; padding: 0; }
+  .footer-notes li { margin-bottom: 3px; }
+
+  a { color: #4a6b9a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="tab-nav">
+  <a href="index.html">StephenWhite</a>
+  <a href="randy-browne.html">RandyBrowne</a>
+  <a href="julian-cohen.html" class="active">JulianCohen</a>
+</nav>
+
+<header class="top">
+  <div class="eyebrow">Advisor-candidate prep · Today's 3pm ET call · Stage 2 (getting-to-know)</div>
+  <h1>Julian Cohen — 25-yr brand-builder, ex-Beam/Constellation/Canopy, now FOSH co-founder</h1>
+  <div class="meta">Marketing + Insights + Innovation lens · Chicago · <a href="https://www.linkedin.com/in/julianmcohen/" target="_blank">LinkedIn</a> · Active consulting practice (Ghost Tequila, Watershed, Dickel, Proximo, Tatanka)</div>
+</header>
+
+<!-- ═══════ SUMMARY + NEXT ACTION ═══════ -->
+<div class="tldr">
+  <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#3d5e26; font-weight:700; margin:0 0 6px;">📌 Summary</p>
+  <p><strong>Julian Cohen — advisor candidate, not yet signed.</strong> 25-year brand-builder across BevAlc (Beam Suntory VP Global Insights &amp; Innovation, Constellation SVP Business Intelligence + Emerging Categories), Cannabis (Canopy Growth CIO + Chief Growth Officer; key player in Constellation's $4B investment in Canopy via GreenStar), and broader CPG (DDB / Leo Burnett strategic planning for Gatorade, Tropicana, Quaker, Budweiser, Home Depot, Dell). Currently <strong>co-founder + COO of FOSH</strong> (AI-powered live event discovery, Mar 2025-present) + active BevAlc consulting practice. <strong>Today is conversation #2</strong> — Shyam had one initial call last week; no decision either way yet.</p>
+  <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#3d5e26; font-weight:700; margin:14px 0 6px;">▶︎ Next action (what Shyam does today)</p>
+  <p><strong>3:00 PM ET today:</strong> 60-min call with TWO simultaneous goals — (1) voice-of-customer extraction on marketing-innovation decisions (per his function), and (2) mutual fit assessment. We're deciding if we want him; he's deciding if we're worth his time. Treat as a peer-level industry conversation, not a recruiting pitch.</p>
+  <p><strong>Within 24 hrs:</strong> send Julian a 1-page recap + concrete proposal. Either: (a) come on as formal advisor with FAST agreement, or (b) continue with one more exploratory conversation, or (c) part ways amicably. Decision should be ready after today.</p>
+</div>
+
+<!-- ═══════ LIFECYCLE STAGE ═══════ -->
+<div style="background:#f3f5fb; border-left:5px solid #4a6b9a; border-radius:8px; padding:14px 18px; margin:0 0 24px; font-size:13.5px;">
+  <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#2c4d80; font-weight:700; margin:0 0 8px;">📍 Lifecycle stage — getting-to-know · decision after today</p>
+  <table style="width:100%; border-collapse:collapse; font-size:13px;">
+    <tr><td style="padding:4px 0; width:160px; font-weight:600;">Stage 1 · Cold start</td><td style="padding:4px 0;">✓ <span style="color:#6c6760;">Initial outreach + first call last week</span></td></tr>
+    <tr style="background:#fff;"><td style="padding:6px 0; font-weight:700; color:#3d5e26;">Stage 2 · Getting-to-know</td><td style="padding:6px 0; color:#3d5e26; font-weight:600;">◀ TODAY (3:00 PM ET) — conversation #2 of the exploratory phase</td></tr>
+    <tr><td style="padding:4px 0; font-weight:600;">Stage 3 · Decision point</td><td style="padding:4px 0; color:#6c6760;">Within 24 hrs — sign, continue exploring, or part ways</td></tr>
+    <tr><td style="padding:4px 0; font-weight:600;">Stage 4 · First formal session</td><td style="padding:4px 0; color:#6c6760;">If signed → schedule deep voice-of-customer + warm-intro session</td></tr>
+    <tr><td style="padding:4px 0; font-weight:600;">Stage 5 · Engagement</td><td style="padding:4px 0; color:#6c6760;">Series of sessions, demo loop, warm intros</td></tr>
+    <tr><td style="padding:4px 0; font-weight:600;">Stage 6 · Post-advisory</td><td style="padding:4px 0; color:#6c6760;">TBD</td></tr>
+  </table>
+</div>
+
+<!-- ═══════ ADVISOR CATEGORIZATION ═══════ -->
+<div style="background:#fef9ed; border-left:5px solid #b48f3a; border-radius:8px; padding:14px 18px; margin:0 0 24px; font-size:13.5px;">
+  <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#6b4f15; font-weight:700; margin:0 0 8px;">🏷️ What kind of advisor would Julian be?</p>
+  <p style="margin:0 0 8px;"><strong>Primary: product + market advisor — marketing-innovation lens.</strong> Different from Randy's category-management lens. Julian was the senior buyer-of-insights/innovation tools at exactly the kind of supplier orgs BevGenie targets — Beam, Constellation, Canopy.</p>
+  <p style="margin:0 0 8px;"><strong>Strong: buzz partner.</strong> 25 years of brand-building + FOSH AI-startup co-founder credibility + Beverage-Digest speaker + Space Racers global distribution (35 languages, 150+ countries) = he knows how to tell a story. UChicago Leadership and Society Initiative Fellow adds credentialing.</p>
+  <p style="margin:0;"><strong>Indirect: investor connector.</strong> He's actively raising / fundraising for FOSH right now — has live VC relationships. Senior-exec network across 30 years. Not the primary value vector but real.</p>
+</div>
+
+<!-- ═══════ FOUR-CATEGORY MAP ═══════ -->
+<h2 class="section">🎯 What Julian unlocks across our four priorities</h2>
+<p style="font-size:13px; color:#6c6760; font-style:italic; margin:-6px 0 14px;">If he signs, here's the value across the four strategic priorities. <strong>Note he's stronger than Randy on three of four</strong> — Buzz, Customers, Investors are all higher. Today's conversation should still center on ④ Product Intelligence.</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px;">
+  <div style="background:#fff; border:1px solid #e6e2dc; border-left:4px solid #5b8a3a; border-radius:8px; padding:14px 16px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#3d5e26; font-weight:600; margin-bottom:4px;">① Creating buzz · HIGH</div>
+    <div style="font-size:13px;">25-yr brand-builder. FOSH co-founder (AI startup story). Beverage-Digest 2021 speaker. Space Racers global distribution. UChicago LSI Fellow. <strong>He knows how to position a story and has the platforms to amplify.</strong></div>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-left:4px solid #5b8a3a; border-radius:8px; padding:14px 16px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#3d5e26; font-weight:600; margin-bottom:4px;">② Signing customers · HIGH</div>
+    <div style="font-size:13px;">Active consulting clients RIGHT NOW: <strong>Ghost Tequila, Watershed Distillery, Dickel Whisky, Proximo Spirits, Tatanka Spirits</strong>. Plus Beam Suntory + Constellation + Canopy alumni networks. Each of those clients is a potential BevGenie customer-prospect.</div>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-left:4px solid #b48f3a; border-radius:8px; padding:14px 16px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#6b4f15; font-weight:600; margin-bottom:4px;">③ Raising investment · MODERATE-INDIRECT</div>
+    <div style="font-size:13px;">He's actively raising for FOSH — fresh VC relationships in the AI-startup space. 30-yr senior-exec network. Not the primary value vector, but real exposure to founder-side investor relationships.</div>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-left:4px solid #5b8a3a; border-radius:8px; padding:14px 16px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#3d5e26; font-weight:600; margin-bottom:4px;">④ Product intelligence · VERY HIGH ← TODAY'S FOCUS</div>
+    <div style="font-size:13px;">Insights → Innovation pipeline at Beam Suntory + Constellation BI + Canopy CIO. He was the senior buyer of tools BevGenie sells. Plus cross-category (BevAlc / Cannabis / broader CPG) gives unusual breadth.</div>
+  </div>
+</div>
+
+<!-- ═══════ FIT ASSESSMENT (Julian-specific — he's not signed yet) ═══════ -->
+<h2 class="section">⚖️ Mutual fit assessment — what to watch for today</h2>
+<p style="font-size:13px; color:#6c6760; font-style:italic; margin:-6px 0 14px;">Today is a two-way evaluation. We're deciding if we want him; he's deciding if we're worth his time. Here's what to watch for from each side.</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:24px;">
+  <div style="background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#3d5e26; font-weight:700; margin-bottom:8px;">Signals we'd want him as advisor</div>
+    <ul style="margin:0 0 0 18px; padding:0; font-size:13px;">
+      <li style="margin-bottom:4px;">Engages substantively on the marketing-innovation workflow questions (not surface-level)</li>
+      <li style="margin-bottom:4px;">Names specific decisions / tools / outcomes from his Beam / Constellation / Canopy time</li>
+      <li style="margin-bottom:4px;">Shows curiosity about BevGenie's specific wedge — asks pointed questions back</li>
+      <li style="margin-bottom:4px;">Mentions specific people in his network who'd find this interesting (signals he'd open doors)</li>
+      <li>Articulates his time / equity / engagement expectations clearly</li>
+    </ul>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#7a2a1c; font-weight:700; margin-bottom:8px;">Signals to pause or part ways</div>
+    <ul style="margin:0 0 0 18px; padding:0; font-size:13px;">
+      <li style="margin-bottom:4px;">Stays surface-level on workflow questions; gives consultant-pitch answers</li>
+      <li style="margin-bottom:4px;">Pushes hard for paid consulting engagement rather than equity-based advisory</li>
+      <li style="margin-bottom:4px;">FOSH is consuming all his bandwidth — no real time for BevGenie</li>
+      <li style="margin-bottom:4px;">Wants to position himself as outsourced CMO rather than peer advisor</li>
+      <li>Doesn't volunteer any of his actual industry network names</li>
+    </ul>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#3d5e26; font-weight:700; margin-bottom:8px;">What he probably wants to see from us</div>
+    <ul style="margin:0 0 0 18px; padding:0; font-size:13px;">
+      <li style="margin-bottom:4px;">Clear thesis on what BevGenie does and who buys it</li>
+      <li style="margin-bottom:4px;">Founder-team credibility (Shyam's senior tech-platform background)</li>
+      <li style="margin-bottom:4px;">Real customer reference (Sera Luce — validated)</li>
+      <li style="margin-bottom:4px;">Investor traction or path (FOSH co-founder context — he understands the raise)</li>
+      <li>Clear ask of him — not vague "we'd value your guidance"</li>
+    </ul>
+  </div>
+  <div style="background:#fff; border:1px solid #e6e2dc; border-radius:8px; padding:14px 18px;">
+    <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.6px; color:#7a2a1c; font-weight:700; margin-bottom:8px;">What might turn him off</div>
+    <ul style="margin:0 0 0 18px; padding:0; font-size:13px;">
+      <li style="margin-bottom:4px;">Too much pitch-mode, not enough industry-peer conversation</li>
+      <li style="margin-bottom:4px;">Asking him to "tell us about the BevAlc industry" (he'll wonder why we need that)</li>
+      <li style="margin-bottom:4px;">No clear story on what makes BevGenie different from Stackline / Numerator / others he's seen</li>
+      <li>Asking for too much time commitment upfront</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════ SNAPSHOT ═══════ -->
+<h2 class="section">📇 Verified profile snapshot</h2>
+<div class="snapshot">
+  <dl>
+    <dt>Full name</dt><dd><strong>Julian Cohen</strong></dd>
+    <dt>Current roles</dt><dd><strong>Co-Founder &amp; COO, FOSH</strong> (AI-powered local live-event discovery platform, Mar 2025–present, based in Philly with plans to scale) · <strong>Managing Partner, Marketing, Noble Land Brands</strong> (Tatanka Spirits — Wakpamni of the Sioux Nation, since Jul 2023) · <strong>Brand &amp; Business Consultant</strong> · Self-employed (Apr 2023–present; clients include Ghost Tequila, Marussia Brands–Watershed Distillery, Sidecar Drinks–Dickel Whisky, Proximo Spirits) · <strong>Board Advisor, Plesio Health</strong> (Apr 2023–present) · <strong>Advisory Board, CannabisBPO</strong> (Aug 2019–present, 6+ yrs)</dd>
+    <dt>Stated career openness</dt><dd>His About section says: <em>"open to consulting, fractional, and full-time opportunities"</em>. So advisor relationship is one of several plausible engagements; treat that signal in our framing.</dd>
+    <dt>Most recent FT role</dt><dd><strong>Chief Growth Officer + Chief Innovation Officer, Canopy Growth Corporation</strong> (May 2020 – Mar 2023, 2 yrs 11 mos). R&amp;D, Innovation, Brand Marketing. Plant genetics + breeding + product formulation + device engineering + human-effects research.</dd>
+    <dt>Pre-Canopy</dt><dd><strong>Constellation Brands · SVP Emerging Categories</strong> (Nov 2017 – May 2019) — ran GreenStar Canada, the cannabis subsidiary that executed the historic <strong>$4B Constellation investment in Canopy Growth</strong> (announced Aug 2018, closed Nov 2018; Harvard Business School case study) · <strong>Constellation SVP Business Intelligence</strong> (Aug 2015 – Nov 2017) — consumer/shopper insights, business analytics, innovation + sensory research for <strong>Corona, Modelo, Robert Mondavi, Kim Crawford, Svedka, High West, Casa Noble</strong></dd>
+    <dt>Pre-Constellation</dt><dd><strong>Beam Suntory · VP Global Insights &amp; Innovation</strong> (Jun 2008 – Nov 2013, 5 yrs 6 mos) — Jim Beam, Maker's Mark, Knob Creek, Canadian Club, Laphroaig, Sauza, Hornitos, SkinnyGirl, Courvoisier, Cruzan, Pinnacle</dd>
+    <dt>Pre-BevAlc</dt><dd>15 yrs in agency-side strategic planning: <strong>Leo Burnett · VP Brand Planning Director</strong> (Philip Morris + Diageo brands, 2005-06) · <strong>Element 79 · SVP Group Planning Director</strong> (Gatorade, Propel, Tropicana, Quaker, 2007-08) · <strong>DDB · SVP Group Strategic Planning Director</strong> (Dell, Home Depot, cars.com, Pep Boys, General Mills, Tyson, Busch Gardens, Henkel, Wilson Golf, Budweiser, 1998-2005)</dd>
+    <dt>Side project · scaled</dt><dd><strong>Co-Creator + Executive Producer, Space Racers</strong> (Jun 2008 – Aug 2015) — animated TV series teaching preschoolers science, space, teamwork. Distributed in <strong>150+ countries in 35 languages</strong>. Demonstrates ability to ship and scale a product end-to-end on the side of a full-time role.</dd>
+    <dt>Education</dt><dd><strong>BA Economics, University of Chicago</strong> · <strong>Creative Writing degree, University of Miami</strong> · UChicago Lecturer (1993-95) · <strong>UChicago Leadership and Society Initiative Fellow</strong> (senior-exec leadership program)</dd>
+    <dt>Geography</dt><dd>Chicago, Illinois</dd>
+    <dt>About-section self-description</dt><dd><em>"Brand builder with over 25 years of innovation, insights, strategy, and marketing experience in CPG, beverage alcohol, entertainment, and cannabis."</em> Plus: <em>"I believe words and numbers can live together — I am a strategist, a global insights, innovation, and marketing executive with a passion for applying analytical rigor and creative problem-solving."</em></dd>
+    <dt>Public-voice signal</dt><dd>Speaker at Beverage-Digest <strong>Future Smarts 2021</strong>. UChicago Leadership and Society Initiative Fellow. Currently advising cannabis + BevAlc startups in Canada and US.</dd>
+    <dt>Personal</dt><dd>Father of 3 sons. Fan of music, soccer, whiskey, chocolate. (Whiskey is industry-relevant; could come up naturally.)</dd>
+  </dl>
+</div>
+
+<!-- ═══════ WHAT WE WANT TO SURFACE ═══════ -->
+<h2 class="section">🎯 What we want to surface from Julian's experience</h2>
+<p style="font-size:13px; color:#6c6760; font-style:italic; margin:-6px 0 14px;">Six areas where Julian's specific career arc gives unusually rich answers — and why each matters.</p>
+
+<div class="knows">
+  <h3>① How marketing + innovation decisions got made at supplier-side orgs</h3>
+  <p>The Beam Suntory insights→innovation cycle. The Constellation BI → product / portfolio decisions. The Canopy R&amp;D → commercial launch path. He's lived the full cycle inside three major BevAlc/cannabis companies.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> his function (marketing + insights + innovation) is exactly the buyer persona BevGenie is built for. He's been on the receiving end of insights tools, innovation platforms, brand-analytics dashboards. He knows what was useful vs noise.</p>
+</div>
+
+<div class="knows">
+  <h3>② How insights and innovation actually handed off to each other</h3>
+  <p>Headed both functions (Constellation BI + Canopy CIO). The handoff from "we learned X about consumers" to "we'll build Y new product" is famously broken in CPG. He's seen it from both sides.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> automating the insights-to-innovation handoff is exactly the kind of high-value workflow BevGenie should consider. His experience tells us where the handoff fails most.</p>
+</div>
+
+<div class="knows">
+  <h3>③ How new tools and capabilities got evaluated and bought</h3>
+  <p>At Beam Suntory, Constellation, and Canopy — all three had major insights/innovation tool stacks. He was a buyer of agency partners, sensory research vendors, analytics platforms, R&amp;D capabilities.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> this is the same gauntlet BevGenie will run when we sell. Plus he's seen what gets through and what doesn't across multiple corporate cultures.</p>
+</div>
+
+<div class="knows">
+  <h3>④ Cross-vertical pattern — BevAlc vs Cannabis vs broader CPG</h3>
+  <p>BevAlc (Beam, Constellation), Cannabis (Canopy + GreenStar — historic $4B BevAlc-into-cannabis play), broader CPG (DDB strategic planning for Gatorade, Tropicana, Quaker, Dell, Home Depot, Tyson, Yoplait, Wheaties). Unusually wide.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> tells us where the supplier marketing-innovation playbook is BevAlc-specific vs CPG-universal. Big roadmap call (single product across CPG vs vertical-specific BevAlc product).</p>
+</div>
+
+<div class="knows">
+  <h3>⑤ Active consulting practice — real-time BevAlc market read</h3>
+  <p>Clients RIGHT NOW: Ghost Tequila, Watershed Distillery, Dickel Whisky, Proximo Spirits, Tatanka Spirits. Each represents a live BevAlc supplier engagement. He knows what these companies are actually struggling with this quarter.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> he can tell us what supplier-side marketing-innovation pain points are top-of-mind in 2026 — not what they were in 2020 when he left Constellation.</p>
+</div>
+
+<div class="knows" style="border-left-color:#5a3a86;">
+  <h3>⑥ Founder-side read on AI tools — FOSH experience</h3>
+  <p>He's co-founding an AI-powered marketplace startup RIGHT NOW (FOSH, Mar 2025–present). He's living the founder experience — fundraising, pricing, GTM. From the other side of the table from where he sat at Beam / Constellation / Canopy.</p>
+  <p style="margin-top:6px; font-size:12.5px; color:#6c6760;"><strong>Why this matters:</strong> he can speak to what AI tools actually deliver value vs what's overhyped — from a founder seat, not a buyer seat. Direct positioning calibration for BevGenie.</p>
+</div>
+
+<!-- ═══════ QUESTIONS — GROUPED BY THE 4 PRIORITIES ═══════ -->
+<h2 class="section">❓ Questions — grouped by the 4 priorities (today's call = ④ Product Intelligence)</h2>
+<p style="font-size:13px; color:#6c6760; font-style:italic; margin:-6px 0 14px;">Today is conversation #2 with mutual-fit subtext. Pick 4-5 from the ④ Product Intelligence block and go deep. Don't raise the other priority blocks today.</p>
+
+<!-- ④ PRODUCT INTELLIGENCE -->
+<div style="background:#f4f8f2; border-left:4px solid #5b8a3a; border-radius:8px; padding:14px 18px; margin-bottom:18px;">
+  <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#3d5e26; font-weight:700; margin-bottom:6px;">④ PRODUCT INTELLIGENCE — today's focus</div>
+  <p style="font-size:13px; color:#3d5e26; margin:0;">Mining Julian's marketing-innovation experience. Pick 4-5 below.</p>
+</div>
+
+<div style="margin-bottom:8px; font-size:12px; text-transform:uppercase; letter-spacing:0.6px; color:#6c6760; font-weight:600;">Sub-area A · How marketing-innovation decisions got made</div>
+<div class="q-block">
+  <ol>
+    <li class="priority-top">
+      <div class="q-text">"Walk me through one specific innovation decision at Beam Suntory or Constellation — say a new product launch in the Jim Beam or Modelo portfolio. Who was involved at each step? How did insights flow into innovation? Who decided brand strategy vs product specs vs launch plan? What did the output look like?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> his specific function — insights→innovation pipeline — is what BevGenie automates. The reality version of how it worked is what we need to hear.</div>
+    </li>
+    <li class="priority-top">
+      <div class="q-text">"You headed both BI at Constellation AND Innovation at Canopy. The handoff between 'we learned X about consumers' and 'we'll build Y new product' is famously broken in CPG. Where did it actually break in your orgs? What worked when it didn't break?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> automating that handoff is a high-value workflow for BevGenie. His experience tells us where the handoff fails most and what fixes worked.</div>
+    </li>
+    <li>
+      <div class="q-text">"When you ran insights for Corona, Modelo, Mondavi, Svedka — how did decisions get made for cross-brand investments? Who arbitrated when two brands wanted the same research budget or innovation slot?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> cross-brand decision-making is a recurring pain point in multi-brand suppliers. Tells us where BevGenie can replace political coordination work.</div>
+    </li>
+  </ol>
+</div>
+
+<div style="margin-bottom:8px; font-size:12px; text-transform:uppercase; letter-spacing:0.6px; color:#6c6760; font-weight:600; margin-top:14px;">Sub-area B · How new tools / capabilities got evaluated and bought</div>
+<div class="q-block">
+  <ol start="4">
+    <li class="priority-top">
+      <div class="q-text">"When Beam or Constellation or Canopy brought in new insights / innovation tools — agency partners, sensory research vendors, analytics platforms — walk me through how that decision actually got made. Who built the case? Who killed deals? What convinced procurement?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> same gauntlet BevGenie will run when we sell. Plus he's seen what gets through across three different corporate cultures.</div>
+    </li>
+  </ol>
+</div>
+
+<div style="margin-bottom:8px; font-size:12px; text-transform:uppercase; letter-spacing:0.6px; color:#6c6760; font-weight:600; margin-top:14px;">Sub-area C · Cross-organizational comparison (Beam vs Constellation vs Canopy)</div>
+<div class="q-block">
+  <ol start="5">
+    <li class="priority-top">
+      <div class="q-text">"How would you compare working at Beam vs Constellation vs Canopy? Where was the marketing-innovation workflow basically the same? Where was it fundamentally different — and was that because of category, scale, or culture?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> Shyam specifically mentioned this comparison (per his earlier call). Tells us how transportable the BevGenie playbook is across different supplier cultures.</div>
+    </li>
+    <li>
+      <div class="q-text">"The Constellation-Canopy moment — Constellation's $4B investment in Canopy, the GreenStar joint venture you ran. From your seat as SVP Emerging Categories, what worked about that BevAlc-into-cannabis play? What didn't?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> historic deal he was central to. Tells us about cross-vertical strategy moves + what big-supplier M&amp;A around new categories actually looks like.</div>
+    </li>
+  </ol>
+</div>
+
+<div style="margin-bottom:8px; font-size:12px; text-transform:uppercase; letter-spacing:0.6px; color:#6c6760; font-weight:600; margin-top:14px;">Sub-area D · Real-time consulting practice (his current view of the BevAlc market)</div>
+<div class="q-block">
+  <ol start="7">
+    <li>
+      <div class="q-text">"You're currently consulting with Ghost Tequila, Watershed, Dickel, Proximo, Tatanka. What are the patterns you're seeing in 2026 that surprise you? What problems do those clients keep paying you to help solve?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> real-time read on what BevAlc supplier marketing-innovation teams actually struggle with this quarter. Sharpens BevGenie's product roadmap.</div>
+    </li>
+  </ol>
+</div>
+
+<div style="margin-bottom:8px; font-size:12px; text-transform:uppercase; letter-spacing:0.6px; color:#6c6760; font-weight:600; margin-top:14px;">Sub-area E · His outside-in read on AI (founder seat at FOSH)</div>
+<div class="q-block">
+  <ol start="8">
+    <li>
+      <div class="q-text">"You're co-founding FOSH right now — AI-powered live event discovery. From the founder side, what AI capabilities are you finding actually deliver value vs what feels overhyped? And what's your read on AI tools entering the BevAlc supplier space specifically?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> founder-side read on AI tools rather than buyer-side. Direct competitive positioning + market-read intel.</div>
+    </li>
+    <li>
+      <div class="q-text">"If you had to name one marketing-innovation workflow you did over and over at Beam, Constellation, or Canopy — repetitive, predictable inputs, but no tool ever did it well — what was it?"</div>
+      <div class="q-why"><strong>Why this matters:</strong> best single roadmap-shaping question. His answer is what BevGenie should prioritize for marketing-innovation users.</div>
+    </li>
+  </ol>
+</div>
+
+<!-- ② CUSTOMERS — FUTURE ASK -->
+<div style="background:#fef9ed; border-left:4px solid #b48f3a; border-radius:8px; padding:14px 18px; margin:24px 0 8px;">
+  <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#6b4f15; font-weight:700; margin-bottom:6px;">② SIGNING CUSTOMERS — FUTURE ASK · don't raise today</div>
+  <p style="font-size:13px; color:#6b4f15; margin:0 0 8px;">Don't ask in conversation #2 (today). If he signs as advisor, raise in conversation #3 or #4 after rapport is set.</p>
+  <div style="font-size:13.5px;">
+    <p style="margin:0 0 6px;"><strong>Future Q1:</strong> "Your current consulting clients — Ghost Tequila, Watershed, Dickel, Proximo, Tatanka — would any of them be open to a BevGenie conversation if you made the introduction?"</p>
+    <p style="margin:0 0 6px;"><strong>Future Q2:</strong> "Of your former colleagues at Beam Suntory, Constellation, or Canopy — who do you think would be genuinely curious about what we're building?"</p>
+    <p style="margin:0;"><strong>Future Q3:</strong> "Could we co-engage on a specific client situation where you're already in conversation about marketing-innovation transformation?"</p>
+  </div>
+</div>
+
+<!-- ① BUZZ — FUTURE ASK -->
+<div style="background:#f6f3fa; border-left:4px solid #5a3a86; border-radius:8px; padding:14px 18px; margin-bottom:8px;">
+  <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#43286e; font-weight:700; margin-bottom:6px;">① CREATING BUZZ — FUTURE ASK · don't raise today</div>
+  <p style="font-size:13px; color:#43286e; margin:0 0 8px;">Future-session asks once relationship is established.</p>
+  <div style="font-size:13.5px;">
+    <p style="margin:0 0 6px;"><strong>Future Q1:</strong> "Beverage-Digest, BevNet, or other industry events you're plugged into — any upcoming where us showing up together would make sense?"</p>
+    <p style="margin:0 0 6px;"><strong>Future Q2:</strong> "Would you ever co-write a piece on the future of marketing-innovation in BevAlc — your perspective from 25 years inside, our take on what's now possible with AI?"</p>
+    <p style="margin:0;"><strong>Future Q3:</strong> "Your UChicago Leadership and Society Initiative — any cross-pollination opportunities there?"</p>
+  </div>
+</div>
+
+<!-- ③ INVESTORS — HOUSEKEEPING + INDIRECT -->
+<div style="background:#f3f5fb; border-left:4px solid #4a6b9a; border-radius:8px; padding:14px 18px; margin-bottom:8px;">
+  <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.8px; color:#2c4d80; font-weight:700; margin-bottom:6px;">③ RAISING INVESTMENT — indirect + housekeeping · don't raise today</div>
+  <p style="font-size:13px; color:#2c4d80; margin:0 0 8px;">Like Randy, his primary value isn't direct investor connections, but he has more exposure than Randy because he's actively raising for FOSH.</p>
+  <div style="font-size:13.5px;">
+    <p style="margin:0 0 6px;"><strong>Future Q1 (if he signs):</strong> "We'd love to formally list you as Strategic Advisor on BevGenie investor materials — standard FAST agreement format. OK if we send paperwork next week?"</p>
+    <p style="margin:0;"><strong>Future Q2 (much later):</strong> "From your FOSH fundraising — are there investors you've met who you think would also be interested in a vertical-AI play in BevAlc?" <em>(Only after relationship is well-established. Don't ask today.)</em></p>
+  </div>
+</div>
+
+<!-- ═══════ OPENER ═══════ -->
+<h2 class="section">🎙️ Suggested opener (60-90 sec) — peer-level, not pitch-mode</h2>
+<div class="opener">
+  <span class="label">Use this verbatim if it lands naturally — Julian is at peer level with us, address him that way</span>
+  "Julian — good to be back on this. Quick frame for today: I want to do two things. First, learn from your experience — you've been in the marketing-innovation seat at Beam, Constellation, and Canopy, and now you're on the founder side at FOSH. That arc is exactly what we'd want to understand to make BevGenie sharper. Second, I want this to be a two-way conversation about whether there's a fit between what we're building and where you're spending your time right now. You said you're open to consulting, fractional, and full-time — we're thinking advisor first, but I want to be clear about what that would look like before either of us commits. Sound good?"
+</div>
+
+<!-- ═══════ SIGNAL TO LISTEN FOR ═══════ -->
+<h2 class="section">👂 What to capture during the call</h2>
+
+<div class="signal">
+  <span class="sig">His specific decisions / war stories</span>
+  <span class="body">When he names a specific launch at Beam, a specific innovation push at Constellation, a specific decision at Canopy — capture verbatim. Those are the workflows we want to understand.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Insights → Innovation handoff breakdowns</span>
+  <span class="body">Where he says the function he ran "didn't talk to" or "couldn't get through to" another function. That's the coordination gap BevGenie can close.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Tools he tried, kept, killed</span>
+  <span class="body">Named vendors and outcomes. He's been a senior buyer of insights/innovation tools at three major orgs. Free competitive teardown.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">His current consulting clients' actual pain points</span>
+  <span class="body">When he talks about Ghost, Watershed, Dickel, Proximo, or Tatanka — capture the specific problems. Those are live BevAlc supplier prospects that BevGenie could potentially also serve.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Cross-vertical (BevAlc/Cannabis/CPG) generalizations</span>
+  <span class="body">Where he says "it's the same in beer and cannabis" or "this is unique to spirits" — directly informs whether BevGenie's product is BevAlc-specific or broader-CPG.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Mentions of specific people in his network</span>
+  <span class="body">Anyone he mentions positively at Beam / Constellation / Canopy / his current clients / FOSH investors — note for potential future warm intros.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">His own engagement preferences</span>
+  <span class="body">When he describes how he's structured the Plesio or CannabisBPO advisory roles — time commitment, equity vs cash, level of involvement — that's data on what an advisor agreement with him would look like.</span>
+</div>
+
+<div class="signal">
+  <span class="sig">Yellow flags around fit</span>
+  <span class="body">FOSH bandwidth constraints. Push toward paid consulting over advisor equity. Surface-level answers vs operator depth. Capture these honestly — they inform the decision after the call.</span>
+</div>
+
+<!-- ═══════ HOW TO USE WHAT HE SAYS ═══════ -->
+<h2 class="section">🛠️ After the call — what to do with what you heard</h2>
+<div class="next-steps">
+  <ul>
+    <li><strong>Right after the call:</strong> for each decision/workflow he described, write a quick summary — what worked, what broke, what could've been better with the right tool. Cross-check against what BevGenie has built or planned.</li>
+    <li><strong>Within 24 hours — decide:</strong> sign him as advisor, continue exploring (one more conversation), or part ways amicably. Use the Fit Assessment block above to structure the decision. Send him a 1-page recap regardless of decision.</li>
+    <li><strong>If signing:</strong> send the FAST advisor agreement within the week. Schedule conversation #3 — deeper voice-of-customer + first warm-intro ask.</li>
+    <li><strong>If continuing:</strong> propose one more specific session with a defined goal — e.g., "we'd love to walk you through where we are on the marketing-innovation workflow specifically and get your reaction."</li>
+    <li><strong>If parting:</strong> thank him, ask for one specific name in his network he'd recommend instead, stay on LinkedIn-engagement terms.</li>
+    <li><strong>Use his language:</strong> his About-section framing — "I believe words and numbers can live together... analytical rigor and creative problem-solving" — is exactly the BevGenie value proposition (data-driven decisions made human). Lift the wording for our investor narrative.</li>
+  </ul>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<div class="footer-notes">
+  <h3>Sources verified for this brief — cross-checked across LinkedIn + independent web</h3>
+  <ul>
+    <li><strong>LinkedIn Experience section</strong> — full career arc, all roles, dates, brand portfolios — verified May 15, 2026</li>
+    <li><strong>UChicago Leadership and Society Initiative</strong> (<a href="https://leadforsociety.uchicago.edu/fellow/julian-cohen/" target="_blank">leadforsociety.uchicago.edu/fellow/julian-cohen</a>) — confirmed Fellow status, BA Economics UChicago, University of Miami creative-writing degree, 25-yr brand-builder framing</li>
+    <li><strong>Albany Herald + CannabisBPO press releases</strong> (Aug 2019) — confirmed Advisory Board appointment</li>
+    <li><strong>Beverage-Digest Future Smarts 2021</strong> speaker page — confirmed BevAlc industry speaker</li>
+    <li><strong>PR Newswire</strong> — Constellation $5B CAD / $4B USD investment in Canopy Growth (Aug 2018 announcement + Nov 2018 close); HBS case study on the deal; Julian was SVP Emerging Categories running GreenStar Canada during execution</li>
+    <li><strong>RocketReach + Datanyze</strong> — Canopy Growth CIO confirmation</li>
+    <li><strong>Local repo</strong>: Shyam's May 15 call transcript noting Julian had "one conversation very early" with us; framing him as marketing-innovation specialty advisor candidate</li>
+  </ul>
+
+  <h3>Open questions Shyam can fill in mid-call</h3>
+  <ul>
+    <li>Why did he leave Canopy in March 2023?</li>
+    <li>What % of his time is currently on FOSH vs consulting vs other?</li>
+    <li>What advisory engagements is he taking right now beyond Plesio + CannabisBPO?</li>
+    <li>What's his retainer / equity / time-commitment expectation?</li>
+    <li>What did the first call last week leave him with — what's he hoping to learn or decide today?</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
